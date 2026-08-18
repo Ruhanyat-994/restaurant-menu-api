@@ -34,6 +34,20 @@
             "category": "cake",
             "price": 500.0,
             "available": true
+        },
+        {
+            "id": 6,
+            "name": "chips",
+            "category": "fastfood",
+            "price": 10.0,
+            "available": true
+        },
+        {
+            "id": 7,
+            "name": "chips",
+            "category": "fastfood",
+            "price": 10.0,
+            "available": true
         }
     ]
 }
