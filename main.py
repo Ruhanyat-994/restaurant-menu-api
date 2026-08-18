@@ -70,24 +70,6 @@ def get_menu_items(
     }
 
 
-@app.get("/api/menu-items/{menu_id}")
-def get_menu_item(
-    menu_id: int,
-    auth: bool = Depends(check_basic_auth)
-):
-    db = load_database()
-
-    for item in db["menu_items"]:
-        if item["id"] == menu_id:
-            return {
-                "success": True,
-                "data": item
-            }
-
-    raise HTTPException(
-        status_code=404,
-        detail="Menu item not found"
-    )
 
 
 @app.post("/api/menu-items", status_code=201)
@@ -139,37 +121,6 @@ def update_menu_item(
             return {
                 "success": True,
                 "message": "Menu item updated successfully",
-                "data": item
-            }
-
-    raise HTTPException(
-        status_code=404,
-        detail="Menu item not found"
-    )
-
-
-@app.patch("/api/menu-items/{menu_id}")
-def patch_menu_item(
-    menu_id: int,
-    menu_item: MenuItemUpdate,
-    auth: bool = Depends(check_basic_auth)
-):
-    db = load_database()
-
-    for item in db["menu_items"]:
-        if item["id"] == menu_id:
-
-            update_data = menu_item.model_dump(
-                exclude_unset=True
-            )
-
-            item.update(update_data)
-
-            save_database(db)
-
-            return {
-                "success": True,
-                "message": "Menu item patched successfully",
                 "data": item
             }
 
