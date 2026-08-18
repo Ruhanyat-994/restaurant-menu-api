@@ -1,0 +1,39 @@
+{
+    "menu_items": [
+        {
+            "id": 1,
+            "name": "Chicken Burger",
+            "category": "Fast Food",
+            "price": 250.0,
+            "available": true
+        },
+        {
+            "id": 2,
+            "name": "Beef Pizza",
+            "category": "Pizza",
+            "price": 650.0,
+            "available": true
+        },
+        {
+            "id": 3,
+            "name": "Cold Coffee",
+            "category": "Beverage",
+            "price": 150.0,
+            "available": false
+        },
+        {
+            "id": 4,
+            "name": "Phili Cheese Cake",
+            "category": "cake",
+            "price": 500.0,
+            "available": true
+        },
+        {
+            "id": 5,
+            "name": "Phili Cheese Cake",
+            "category": "cake",
+            "price": 500.0,
+            "available": true
+        }
+    ]
+}
